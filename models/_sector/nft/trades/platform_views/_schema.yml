@@ -51,7 +51,7 @@ models:
      tags: ['nft', 'trades', 'cryptopunks']
    description: "NFT trades view for cryptopunks"
 
- - name: dew_gg_view
+ - name: dew_trades_view
    meta:
      blockchain: ["polygon"]
      sector: nft
