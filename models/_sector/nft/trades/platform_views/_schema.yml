@@ -51,6 +51,14 @@ models:
      tags: ['nft', 'trades', 'cryptopunks']
    description: "NFT trades view for cryptopunks"
 
+ - name: dew_gg_view
+   meta:
+     blockchain: ["polygon"]
+     sector: nft
+     contributors: shogun
+   config:
+     tags: ['nft', 'trades', 'dew']
+   description: "NFT trades view for dew"
 
  - name: element_trades_view
    meta:
