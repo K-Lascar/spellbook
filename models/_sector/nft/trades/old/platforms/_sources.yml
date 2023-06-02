@@ -35,3 +35,6 @@ sources:
     tables:
       - name: ERC721NFTMarketV1_evt_Trade
 
+  - name: dew_polygon
+    tables:
+      - name: dew_market_evt_Fulfilled

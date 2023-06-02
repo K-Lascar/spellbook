@@ -233,3 +233,33 @@ models:
             - amount_original
             - buyer
             - seller
+
+  - name: dew_polygon_events
+    meta:
+      blockchain: polygon
+      project: dew
+      contributors: shogun
+    config:
+      tags: [ 'dew','polygon','nft', events','aggregator' ]
+    description: >
+      Dew.gg events on Polygon.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - block_date
+            - tx_hash
+            - evt_index
+      - check_seed:
+          seed_file: ref('dew_events_seed')
+          match_columns:
+            - block_number
+            - tx_hash
+            - evt_index
+          check_columns:
+            - seller
+            - buyer
+            - nft_contract_address
+            - currency
+            - token_id
+            - amount_original
+            - royalty_fee_amount
